@@ -4,3 +4,4 @@
 .swc
 dist
 node_modules
+.vercel
