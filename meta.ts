@@ -1,9 +1,9 @@
 const fs = require('fs');
 
 const ICONS_DIRECTORY: string = './src/icons/';
-const ICON_DIST: string = './dist/meta.js';
+const ICON_DIST: string = './dist/meta.ts';
 
-const FILE_BEFORE: string = 'const meta = [\n';
+const FILE_BEFORE: string = 'export const meta = [\n';
 const FILE_AFTER: string = '];\n';
 
 let icons: string = '';

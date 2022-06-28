@@ -1,4 +1,6 @@
-.git
 .env
-node_modules
+.git
+.next
+.swc
 dist
+node_modules
