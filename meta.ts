@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const ICONS_DIRECTORY: string = './src/';
+const ICONS_DIRECTORY: string = './src/icons/';
 const ICON_DIST: string = './dist/meta.js';
 
 const FILE_BEFORE: string = 'const meta = [\n';
