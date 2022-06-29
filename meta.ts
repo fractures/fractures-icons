@@ -4,7 +4,7 @@ const ICONS_DIRECTORY: string = "./src/icons/";
 const ICON_DIST: string = "./dist/meta.ts";
 
 const FILE_BEFORE: string = "export const meta = [\n";
-const FILE_AFTER: string = "];\n";
+const FILE_AFTER: string = "] as const;\n";
 
 let icons: string = "";
 let fileContent: string = ``;
