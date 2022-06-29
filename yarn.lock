@@ -97,10 +97,10 @@
   resolved "https://registry.yarnpkg.com/@fractures/icons/-/icons-0.0.5.tgz#62d455fd06bae92f6e9910df9ad58fd66b3921c2"
   integrity sha512-DNfQmczA0TuY7Yi7CkSB2CnZ8o7QMP9fcB4Gk7mn82ArmUmRSszvtTVuz+e4HxIj6SAMNLBhiJiX0vpZWWD8Xw==
 
-"@fractures/ui@^0.1.48":
-  version "0.1.48"
-  resolved "https://registry.yarnpkg.com/@fractures/ui/-/ui-0.1.48.tgz#04143242b720a367b600cdbb265b9207d2a9dad9"
-  integrity sha512-0+ddoGoRb6w3pauYTy9G2XJjpSM9eqi8OEAqDkhbWT7ivs5g6ZTMUtiORMH8O3UX9MRSkveiGO4VQTRCGRrrOw==
+"@fractures/ui@^0.1.51":
+  version "0.1.51"
+  resolved "https://registry.yarnpkg.com/@fractures/ui/-/ui-0.1.51.tgz#af71efdec9ca76b2c70b4b143e2487da2a8644ec"
+  integrity sha512-TSRYEfJd9ZJzJWeY+7JDExjM6aQ97PjZOXdd+k+B0YfhALADzi4ElpsApnDZWa4OVZM9Jcp2lo3GxuZqVzZx6g==
   dependencies:
     "@fractures/icons" "^0.0.5"
     "@sindresorhus/class-names" "^1.1.0"

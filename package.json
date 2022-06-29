@@ -23,7 +23,7 @@
     "@figma-export/output-components-as-svg": "^4.4.0",
     "@figma-export/output-styles-as-sass": "^4.4.0",
     "@fractures/css": "^2.0.2",
-    "@fractures/ui": "^0.1.48",
+    "@fractures/ui": "^0.1.51",
     "@swc/core": "^1.2.205",
     "@swc/helpers": "^0.4.2",
     "@types/node": "^17.0.42",

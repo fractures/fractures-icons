@@ -26,8 +26,8 @@ const Home: React.FC<{}> = () => {
 
   return (
     <Container>
-      <Flex isColumn={true} gap={16}>
-        <Flex isColumn={true} gap={6}>
+      <Flex isColumn={true} gap={12}>
+        <Flex isColumn={true} gap={12}>
           <Heading level={1}>
             <Flex gap={8} isYCentered={true}>
               <Icon name="crown" size={32} color="blue" />
@@ -49,17 +49,14 @@ const Home: React.FC<{}> = () => {
             </a>
             .
             <br />
-            Solids only, designed on a 24pt grid.
+            Solid SVGs only, designed on a 24pt grid.
           </Heading>
           <Separator />
           <Flex isColumn={true} gap={2}>
             <Flex gap={4} isYCentered={true}>
               <Icon color="gray" size={16} name="arrow-right" />
-              <Text type="small" color="gray">
-                Add to your project with
-              </Text>
               <Text fontFamily="mono" type="small" color="gray">
-                yarn add @fractures/icons
+                Add to your project with yarn add @fractures/icons
               </Text>
               <Pill
                 label={`${version}`}
@@ -70,11 +67,8 @@ const Home: React.FC<{}> = () => {
             </Flex>
             <Flex gap={4} isYCentered={true}>
               <Icon color="gray" size={16} name="arrow-right" />
-              <Text type="small" color="gray">
-                Import svgs directly
-              </Text>
               <Text fontFamily="mono" type="small" color="gray">
-                from @fractures/icons/dist/arrow-right
+                Import svgs directly from @fractures/icons/dist/arrow-right
               </Text>
             </Flex>
           </Flex>
