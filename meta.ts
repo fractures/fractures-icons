@@ -1,5 +1,3 @@
-export { };
-
 const fs = require("fs");
 
 const ICONS_DIRECTORY: string = "./src/icons/";
