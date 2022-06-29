@@ -1,14 +1,14 @@
 module.exports = {
   multipass: true,
   plugins: [
-    'preset-default',
-    'removeViewBox',
-    'removeDimensions',
+    "preset-default",
+    "removeViewBox",
+    "removeDimensions",
     {
-      name: 'removeAttrs',
+      name: "removeAttrs",
       params: {
-        attrs: '(width|height|style|color|fill)',
+        attrs: "(width|height|style|color|fill)",
       },
     },
   ],
-}
+};
