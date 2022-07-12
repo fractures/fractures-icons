@@ -1,6 +1,6 @@
 {
   "name": "@fractures/icons",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": "Chris Puska <theta@hey.com>",
   "scripts": {
     "docs:dev": "next dev",
@@ -21,7 +21,7 @@
   ],
   "main": "./",
   "dependencies": {
-    "@fractures/icons": "^0.0.6"
+    "@fractures/icons": "^0.0.8"
   },
   "devDependencies": {
     "@figma-export/cli": "^4.4.0",
