@@ -7,9 +7,10 @@
     "docs:build": "NODE_ENV=production next build",
     "docs:start": "next start",
     "docs:lint": "next lint",
-    "prepublishOnly": "yarn run build && yarn run build:meta",
+    "pub": "yarn run build && yarn run build:meta && yarn run build:copy && yarn publish dist --access public",
     "build": "svgo -f ./src/icons -o ./dist --config=./svgo.config.js",
     "build:meta": "ts-node ./build.meta.ts",
+    "build:copy": "cp ./package.json ./dist/ && cp ./LICENSE.md ./dist/ && cp ./README.md ./dist/",
     "test": "svgo --help",
     "figma:export-components": "FIGMA_TOKEN=$(grep FIGMA_TOKEN .env | cut -d '=' -f2) figma-export components $(grep FIGMA_FILE .env | cut -d '=' -f2) -O @figma-export/output-components-as-svg --output ./src"
   },
