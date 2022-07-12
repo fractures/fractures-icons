@@ -8,16 +8,15 @@
     "docs:start": "next start",
     "docs:lint": "next lint",
     "prepublishOnly": "yarn run build && yarn run build:meta",
-    "build": "svgo -f ./src/icons -o ./dist --config=./svgo.config.js",
+    "build": "svgo -f ./src/icons -o ./ --config=./svgo.config.js",
     "build:meta": "ts-node ./meta.ts",
     "test": "svgo --help",
     "figma:export-components": "FIGMA_TOKEN=$(grep FIGMA_TOKEN .env | cut -d '=' -f2) figma-export components $(grep FIGMA_FILE .env | cut -d '=' -f2) -O @figma-export/output-components-as-svg --output ./src"
   },
-  "files": [
-    "./dist"
-  ],
-  "main": "./dist",
-  "dependencies": {},
+  "main": "./",
+  "dependencies": {
+    "@fractures/icons": "^0.0.5"
+  },
   "devDependencies": {
     "@figma-export/cli": "^4.4.0",
     "@figma-export/output-components-as-svg": "^4.4.0",

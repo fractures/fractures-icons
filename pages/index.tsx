@@ -4,13 +4,13 @@ import {
   Text,
   Separator,
   Input,
-  Pill,
   Container,
   Heading,
   Icon,
 } from "@fractures/ui";
 import { meta } from "../dist/meta";
 import { version } from "../package.json";
+import IconFlash from "../src/icons/flash.svg";
 
 const Home: React.FC<{}> = () => {
   const [filter, setFilter] = useState<string>("");
@@ -30,24 +30,36 @@ const Home: React.FC<{}> = () => {
             <Flex gap={8} isYCentered={true}>
               <Icon name="crown" size={32} color="blue" />
               <span>FUI Icons</span>
-              <Pill
-                isSmall={true}
-                color="blue"
-                label={`${meta.length} icons`}
-              />
             </Flex>
           </Heading>
+          <Flex gap={8}>
+            <Flex isColumn={true}>
+              <Flex gap={4} isYCentered={true}>
+                <Heading level={3} fontWeight="normal">
+                  {meta.length}
+                </Heading>
+                <IconFlash height={16} width={16} />
+              </Flex>
+              <Text type="small" color="gray">
+                icons
+              </Text>
+            </Flex>
+            <Flex isColumn={true}>
+              <Flex gap={4} isYCentered={true}>
+                <Heading level={3} fontWeight="normal">
+                  {version}
+                </Heading>
+                <IconFlash height={16} width={16} />
+              </Flex>
+              <Text type="small" color="gray">
+                version
+              </Text>
+            </Flex>
+          </Flex>
           <Heading level={4} fontWeight="normal">
-            A tiny, human and functional icon library designed for{" "}
-            <a
-              className="blue-500 hover:blue-700"
-              href="https://ui.fractures.dev/"
-            >
-              Fractures UI
-            </a>
-            .
+            A tiny, human and functional icon library.
             <br />
-            Solid SVGs only, designed on a 24pt grid.
+            Hand-crafted, solid SVGs. Only the essentials.
           </Heading>
           <Separator />
           <Flex isColumn={true} gap={2}>
@@ -56,12 +68,6 @@ const Home: React.FC<{}> = () => {
               <Text fontFamily="mono" type="small" color="gray">
                 Add to your project with yarn add @fractures/icons
               </Text>
-              <Pill
-                label={`${version}`}
-                color="blue"
-                isSmall={true}
-                isDark={true}
-              />
             </Flex>
             <Flex gap={4} isYCentered={true}>
               <Icon color="gray" size={16} name="arrow-right" />
@@ -80,8 +86,8 @@ const Home: React.FC<{}> = () => {
           placeholder="Eg.: arrow"
           type="text"
         />
-        <Flex isWrapping={true}>
-          {meta.map((icon, key) => {
+        <Flex isWrapping={true} gap={2}>
+          {filteredIcons.map((icon, key) => {
             const isFound: boolean = filteredIcons.includes(icon);
             const Icon = lazy(() => import(`../src/icons/${icon}.svg`));
 
@@ -92,21 +98,24 @@ const Home: React.FC<{}> = () => {
                 padding={4}
                 isCentered={true}
                 isColumn={true}
-                className={
-                  isFound
-                    ? "bg-green-100 green-600 h-48 w-48"
-                    : "bg-gray-100 gray-800 h-48 w-48"
-                }
+                className="bg-gray-25 gray-800 radius-3 h-48 w-48"
               >
-                <Suspense fallback={null}>
-                  <Icon height={48} width={48} />
-                </Suspense>
-                <Text type="tiny">{icon}</Text>
+                <div className="h-24 w-24">
+                  <Suspense fallback={null}>
+                    <Icon height={48} width={48} />
+                  </Suspense>
+                </div>
+                <Text type="small">{icon}</Text>
               </Flex>
             );
           })}
         </Flex>
       </Flex>
+      <style jsx={true} global={true}>{`
+        path {
+          fill: currentColor;
+        }
+      `}</style>
     </Container>
   );
 };
