@@ -1,24 +1,22 @@
 {
   "name": "@fractures/icons",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "author": "Chris Puska <theta@hey.com>",
   "scripts": {
     "docs:dev": "next dev",
     "docs:build": "NODE_ENV=production next build",
     "docs:start": "next start",
     "docs:lint": "next lint",
-    "prepublishOnly": "yarn run build && yarn run build:meta && yarn run build:copy",
-    "postpublish": "git clean -fd",
+    "prepublishOnly": "yarn run build && yarn run build:meta",
     "build": "svgo -f ./src/icons -o ./dist --config=./svgo.config.js",
-    "build:copy": "cp -r ./dist/* . && rm -rf ./dist",
     "build:meta": "ts-node ./build.meta.ts",
     "test": "svgo --help",
     "figma:export-components": "FIGMA_TOKEN=$(grep FIGMA_TOKEN .env | cut -d '=' -f2) figma-export components $(grep FIGMA_FILE .env | cut -d '=' -f2) -O @figma-export/output-components-as-svg --output ./src"
   },
   "files": [
-    "*.svg",
-    "package.json"
+    "./dist"
   ],
+  "main": "./dist/meta.ts",
   "dependencies": {},
   "devDependencies": {
     "@figma-export/cli": "^4.4.0",
