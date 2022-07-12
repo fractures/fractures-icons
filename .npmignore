@@ -3,5 +3,4 @@
 .next
 .swc
 .vercel
-dist
 node_modules
