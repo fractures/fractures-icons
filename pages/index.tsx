@@ -35,7 +35,7 @@ const Home: React.FC<{}> = () => {
           <Flex gap={8}>
             <Flex isColumn={true}>
               <Flex gap={4} isYCentered={true}>
-                <Heading level={3} fontWeight="normal">
+                <Heading level={2} fontWeight="normal">
                   {meta.length}
                 </Heading>
                 <IconFlash height={16} width={16} />
@@ -46,7 +46,7 @@ const Home: React.FC<{}> = () => {
             </Flex>
             <Flex isColumn={true}>
               <Flex gap={4} isYCentered={true}>
-                <Heading level={3} fontWeight="normal">
+                <Heading level={2} fontWeight="normal">
                   {version}
                 </Heading>
                 <IconFlash height={16} width={16} />
@@ -56,7 +56,7 @@ const Home: React.FC<{}> = () => {
               </Text>
             </Flex>
           </Flex>
-          <Heading level={4} fontWeight="normal">
+          <Heading level={3} fontWeight="normal">
             A tiny, human and functional icon library.
             <br />
             Hand-crafted, solid SVGs. Only the essentials.
@@ -72,7 +72,7 @@ const Home: React.FC<{}> = () => {
             <Flex gap={4} isYCentered={true}>
               <Icon color="gray" size={16} name="arrow-right" />
               <Text fontFamily="mono" type="small" color="gray">
-                Import svgs directly from @fractures/icons/dist/arrow-right
+                Import SVG directly from @fractures/icons/arrow-right
               </Text>
             </Flex>
           </Flex>
@@ -88,7 +88,6 @@ const Home: React.FC<{}> = () => {
         />
         <Flex isWrapping={true} gap={2}>
           {filteredIcons.map((icon, key) => {
-            const isFound: boolean = filteredIcons.includes(icon);
             const Icon = lazy(() => import(`../src/icons/${icon}.svg`));
 
             return (
@@ -105,7 +104,7 @@ const Home: React.FC<{}> = () => {
                     <Icon height={48} width={48} />
                   </Suspense>
                 </div>
-                <Text type="small">{icon}</Text>
+                <Text type="tiny">{icon}</Text>
               </Flex>
             );
           })}

@@ -19,7 +19,9 @@
     "*.svg"
   ],
   "main": "./meta.ts",
-  "dependencies": {},
+  "dependencies": {
+    "@fractures/icons": "^0.0.18"
+  },
   "devDependencies": {
     "@figma-export/cli": "^4.4.0",
     "@figma-export/output-components-as-svg": "^4.4.0",
