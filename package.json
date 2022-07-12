@@ -1,6 +1,6 @@
 {
   "name": "@fractures/icons",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "author": "Chris Puska <theta@hey.com>",
   "scripts": {
     "docs:dev": "next dev",
@@ -19,10 +19,8 @@
     "./*.svg",
     "./package.json"
   ],
-  "main": "./index.js",
-  "dependencies": {
-    "@fractures/icons": "0.0.9"
-  },
+  "main": "./package.json",
+  "dependencies": {},
   "devDependencies": {
     "@figma-export/cli": "^4.4.0",
     "@figma-export/output-components-as-svg": "^4.4.0",
