@@ -1,3 +1,4 @@
+import React, { Suspense, lazy, useState } from "react";
 import {
   Flex,
   Text,
@@ -6,12 +7,9 @@ import {
   Pill,
   Container,
   Heading,
-  Tile,
   Icon,
-  type FUIIconType,
 } from "@fractures/ui";
 import { meta } from "../dist/meta";
-import React, { useState } from "react";
 import { version } from "../package.json";
 
 const Home: React.FC<{}> = () => {
@@ -77,6 +75,7 @@ const Home: React.FC<{}> = () => {
         <Input
           label="Find an icon"
           onChange={onFilter}
+          isLabelHidden={true}
           value={filter}
           placeholder="Eg.: arrow"
           type="text"
@@ -84,18 +83,26 @@ const Home: React.FC<{}> = () => {
         <Flex isWrapping={true}>
           {meta.map((icon, key) => {
             const isFound: boolean = filteredIcons.includes(icon);
+            const Icon = lazy(() => import(`../src/icons/${icon}.svg`));
 
             return (
-              <Tile
-                color={isFound ? "green" : "red"}
-                size={80}
-                icon={icon as FUIIconType}
+              <Flex
                 key={key}
+                gap={2}
+                padding={4}
+                isCentered={true}
+                isColumn={true}
+                className={
+                  isFound
+                    ? "bg-green-100 green-600 h-48 w-48"
+                    : "bg-gray-100 gray-800 h-48 w-48"
+                }
               >
-                <Text type="tiny" color={isFound ? "dark-green" : "dark-red"}>
-                  {icon}
-                </Text>
-              </Tile>
+                <Suspense fallback={null}>
+                  <Icon height={48} width={48} />
+                </Suspense>
+                <Text type="tiny">{icon}</Text>
+              </Flex>
             );
           })}
         </Flex>
