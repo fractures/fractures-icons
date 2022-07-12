@@ -1,6 +1,6 @@
 {
   "name": "@fractures/icons",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "author": "Chris Puska <theta@hey.com>",
   "scripts": {
     "docs:dev": "next dev",
@@ -16,10 +16,13 @@
     "figma:export-components": "FIGMA_TOKEN=$(grep FIGMA_TOKEN .env | cut -d '=' -f2) figma-export components $(grep FIGMA_FILE .env | cut -d '=' -f2) -O @figma-export/output-components-as-svg --output ./src"
   },
   "files": [
-    "./"
+    "*.svg",
+    "package.json"
   ],
   "main": "./",
-  "dependencies": {},
+  "dependencies": {
+    "@fractures/icons": "^0.0.6"
+  },
   "devDependencies": {
     "@figma-export/cli": "^4.4.0",
     "@figma-export/output-components-as-svg": "^4.4.0",

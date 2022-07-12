@@ -1057,6 +1057,11 @@
   resolved "https://registry.yarnpkg.com/@fractures/icons/-/icons-0.0.5.tgz#62d455fd06bae92f6e9910df9ad58fd66b3921c2"
   integrity sha512-DNfQmczA0TuY7Yi7CkSB2CnZ8o7QMP9fcB4Gk7mn82ArmUmRSszvtTVuz+e4HxIj6SAMNLBhiJiX0vpZWWD8Xw==
 
+"@fractures/icons@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@fractures/icons/-/icons-0.0.6.tgz#f6fb4680de69b3716ca54e11b64d720e6e6ee630"
+  integrity sha512-NciGOUpYygOULN85ETREbKwBcQI48HZq1Q0kyi6kGhq2Cc8vAu2p4huts/SfWaHTuY2/T1EayNiiyZUq3Ir+tw==
+
 "@fractures/ui@^0.1.51":
   version "0.1.51"
   resolved "https://registry.yarnpkg.com/@fractures/ui/-/ui-0.1.51.tgz#af71efdec9ca76b2c70b4b143e2487da2a8644ec"
