@@ -1,6 +1,6 @@
 {
   "name": "@fractures/icons",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "author": "Chris Puska <theta@hey.com>",
   "scripts": {
     "docs:dev": "next dev",
